@@ -114,7 +114,7 @@ model=build_model(win_size,feature_size,hiden=30)
 # %% train
 result=model.fit(x_train,y_train,
     batch_size=100,
-    epochs=30,
+    epochs=80,
     validation_data=(x_validation,y_validation))
 
 # %% plot loss
