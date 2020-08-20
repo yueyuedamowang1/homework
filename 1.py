@@ -79,12 +79,13 @@ def multi_step_predict(model,data,N=1,feature_size=1):
 #%% load the data
 
 stock_hfq_df = ak.stock_zh_a_daily(symbol="sh600000", adjust="hfq")  # 利用 AkShare 获取后复权数据
+stock_hfq_df=stock_hfq_df[ '2017-01-01':'2018-01-01']
+print(stock_hfq_df)
+#x_train,y_train,x_validation,y_validation,x_test,y_test,x_scalar,y_scalar=getTrain(
+#    stock_hfq_df,train_ratio=0.85,validation_ratio=0.1,features=range(0,4))
 
-x_train,y_train,x_validation,y_validation,x_test,y_test,x_scalar,y_scalar=getTrain(
-    stock_hfq_df,train_ratio=0.85,validation_ratio=0.1,features=range(0,4))
-
-plt.plot(x_train[:,0])
-plt.plot(y_train[:])
+#plt.plot(x_train[:,0])
+#plt.plot(y_train[:])
 
 
 # %% sanity check
